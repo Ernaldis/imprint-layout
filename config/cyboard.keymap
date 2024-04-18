@@ -1,52 +1,101 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/ext_power.h>
 
 / {
-    chosen { zmk,matrix-transform = &imprint_function_row;
-    };
+    chosen { zmk,matrix-transform = &imprint_function_row; };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
- &kp ESC    &kp F1    &kp F2    &kp F3    &kp F4  &kp F5                                         &kp F6      &kp F7     &kp F8    &kp F9   &kp F10  &kp F11
- &kp EQL    &kp N1    &kp N2    &kp N3    &kp N4  &kp N5                                         &kp N6      &kp N7     &kp N8    &kp N9   &kp N0   &kp MINUS
- &kp TAB    &kp Q     &kp W     &kp E     &kp R   &kp T                                          &kp Y       &kp U      &kp I     &kp O    &kp P    &kp BSLH
- &kp LCTRL  &kp A     &kp S     &kp D     &kp F   &kp G                                          &kp H       &kp J      &kp K     &kp L    &kp SEMI &kp SQT
- &kp LSHFT  &kp Z     &kp X     &kp C     &kp V   &kp B                                          &kp N       &kp M      &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                      &kp LGUI  &kp LALT                                                                                &kp LBKT  &kp RBKT
-                                                  &kp RET &kp DEL  &kp ESC    &kp GRAVE &kp BSPC &kp SPACE
-                                                  &mo 1   &kp HOME &kp END    &kp CAPS &kp K_APP &mo 2
+&kp ESC       &kp F1  &kp F2  &kp F3  &kp F4   &kp F5                                &kp F6            &kp F7         &kp F8     &kp F9    &kp F10  &kp F11
+&kp EQUAL     &kp N1  &kp N2  &kp N3  &kp N4   &kp N5                                &kp N6            &kp N7         &kp N8     &kp N9    &kp N0   &kp BACKSLASH
+&kp GRAVE     &kp B   &kp Y   &kp O   &kp U    &kp SINGLE_QUOTE                      &kp SEMICOLON     &kp L          &kp D      &kp W     &kp V    &kp Z
+&kp CAPSLOCK  &kp C   &kp I   &kp E   &kp A    &kp LESS_THAN                         &kp GREATER_THAN  &kp H          &kp T      &kp S     &kp N    &kp Q
+&mo 1         &kp G   &kp X   &kp J   &kp K    &kp MINUS                             &kp SLASH         &kp R          &kp M      &kp F     &kp P    &mo 6
+                      &mo 2   &mo 3                                                                                   &kp LBKT   &kp RBKT
+                                      &kp RET  &kp DEL           &kp LEFT_CONTROL    &kp TAB           &kp BSPC       &kp SPACE
+                                      &mo 4    &kp LEFT_GUI      &kp LEFT_SHIFT      &kp ESCAPE        &kp RIGHT_ALT  &mo 5
             >;
         };
 
-        Layer__1 {
+        movement {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans   &trans   &trans    &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans   &trans   &trans    &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &kp HOME &kp UP   &kp END   &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &kp LEFT &kp DOWN &kp RIGHT &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans   &trans   &trans    &trans  &trans
-                 &trans  &trans                                                                      &trans   &trans
-                                      &trans  &trans &trans       &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
-                                      &trans  &trans &trans       &kp C_PREV   &kp C_NEXT   &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans        &trans        &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans        &trans        &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans        &kp HOME      &kp UP    &kp END    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans        &kp LEFT      &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans        &trans        &trans    &trans     &trans  &trans
+                &trans  &trans                                                        &trans    &trans
+                                &trans  &trans  &trans    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP
+                                &trans  &trans  &trans    &kp C_PREV    &kp C_NEXT    &trans
             >;
         };
 
-        Layer__2 {
+        keyboard-control {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &rgb_ug RGB_TOG  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &rgb_ug RGB_TOG  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
-                 &trans  &trans                                                                     &trans  &trans
-                                         &trans  &trans &trans        &trans &trans &trans
-                                         &trans  &trans &trans        &trans &trans &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &rgb_ug RGB_TOG  &trans           &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &rgb_ug RGB_TOG  &trans           &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans           &trans           &trans           &trans  &trans
+                &trans  &trans                                                     &trans           &trans
+                                &trans  &trans  &trans    &trans  &trans           &trans
+                                &trans  &trans  &trans    &trans  &trans           &trans
+            >;
+        };
+
+        helix {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans                                            &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        symbols {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans                                            &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans                                            &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans                                            &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
