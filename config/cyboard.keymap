@@ -11,14 +11,14 @@
 
         default_layer {
             bindings = <
-&kp ESC       &kp F1  &kp F2  &kp F3  &kp F4   &kp F5                                &kp F6         &kp F7         &kp F8     &kp F9    &kp F10  &kp F11
-&kp EQUAL     &kp N1  &kp N2  &kp N3  &kp N4   &kp N5                                &kp N6         &kp N7         &kp N8     &kp N9    &kp N0   &kp BACKSLASH
-&kp GRAVE     &kp B   &kp Y   &kp O   &kp U    &kp SINGLE_QUOTE                      &kp SEMICOLON  &kp L          &kp D      &kp W     &kp V    &kp Z
-&kp CAPSLOCK  &kp C   &kp I   &kp E   &kp A    &kp COMMA                             &kp PERIOD     &kp H          &kp T      &kp S     &kp N    &kp Q
-&mo 1         &kp G   &kp X   &kp J   &kp K    &kp MINUS                             &kp SLASH      &kp R          &kp M      &kp F     &kp P    &mo 6
-                      &mo 2   &mo 3                                                                                &kp LBKT   &kp RBKT
-                                      &kp RET  &kp LEFT_SHIFT    &kp DELETE          &kp BACKSPACE  &kp TAB        &kp SPACE
-                                      &mo 4    &kp LEFT_GUI      &kp LEFT_CONTROL    &kp ESCAPE     &kp RIGHT_ALT  &mo 5
+&kp ESC     &kp F1  &kp F2  &kp F3  &kp F4   &kp F5                            &kp F6         &kp F7             &kp F8     &kp F9    &kp F10  &kp F11
+&kp EQUAL   &kp N1  &kp N2  &kp N3  &kp N4   &kp N5                            &kp N6         &kp N7             &kp N8     &kp N9    &kp N0   &kp BACKSLASH
+&kp GRAVE   &kp B   &kp Y   &kp O   &kp U    &kp SINGLE_QUOTE                  &kp SEMICOLON  &kp L              &kp D      &kp W     &kp V    &kp Z
+&caps_word  &kp C   &kp I   &kp E   &kp A    &kp COMMA                         &kp PERIOD     &kp H              &kp T      &kp S     &kp N    &kp Q
+&mo 1       &kp G   &kp X   &kp J   &kp K    &kp MINUS                         &kp SLASH      &kp R              &kp M      &kp F     &kp P    &mo 6
+                    &mo 2   &mo 3                                                                                &kp LBKT   &kp RBKT
+                                    &kp RET  &kp LEFT_SHIFT    &kp DELETE      &kp BACKSPACE  &kp TAB            &kp SPACE
+                                    &mo 4    &kp LEFT_GUI      &kp LEFT_ALT    &kp ESCAPE     &kp RIGHT_CONTROL  &mo 5
             >;
         };
 
