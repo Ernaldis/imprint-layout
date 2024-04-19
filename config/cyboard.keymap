@@ -17,8 +17,8 @@
 &kp CAPSLOCK  &kp C   &kp I   &kp E   &kp A    &kp COMMA                             &kp PERIOD     &kp H          &kp T      &kp S     &kp N    &kp Q
 &mo 1         &kp G   &kp X   &kp J   &kp K    &kp MINUS                             &kp SLASH      &kp R          &kp M      &kp F     &kp P    &mo 6
                       &mo 2   &mo 3                                                                                &kp LBKT   &kp RBKT
-                                      &kp RET  &kp DEL           &kp LEFT_CONTROL    &kp TAB        &kp BSPC       &kp SPACE
-                                      &mo 4    &kp LEFT_GUI      &kp LEFT_SHIFT      &kp ESCAPE     &kp RIGHT_ALT  &mo 5
+                                      &kp RET  &kp LEFT_SHIFT    &kp DELETE          &kp BACKSPACE  &kp TAB        &kp SPACE
+                                      &mo 4    &kp LEFT_GUI      &kp LEFT_CONTROL    &kp ESCAPE     &kp RIGHT_ALT  &mo 5
             >;
         };
 
