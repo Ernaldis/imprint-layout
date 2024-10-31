@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -25,14 +24,14 @@
 
         movement {
             bindings = <
-&trans  &trans  &trans        &kp SLASH     &kp ASTERISK  &kp MINUS            &trans        &trans        &trans    &trans     &trans  &trans
-&trans  &trans  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp PLUS             &trans        &trans        &trans    &trans     &trans  &trans
-&trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans               &trans        &kp HOME      &kp UP    &kp END    &trans  &trans
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kt NUMBER_3  &trans               &trans        &kp LEFT      &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp ENTER     &kp NUMBER_0  &kp PERIOD    &trans               &trans        &trans        &trans    &trans     &trans  &trans
-                &trans        &trans                                                                       &trans    &trans
-                                            &trans        &trans     &trans    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP
-                                            &trans        &trans     &trans    &kp C_PREV    &kp C_NEXT    &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans        &trans        &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans        &trans        &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans        &kp HOME      &kp UP    &kp END    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans        &kp LEFT      &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans        &trans        &trans    &trans     &trans  &trans
+                &trans  &trans                                                        &trans    &trans
+                                &trans  &trans  &trans    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP
+                                &trans  &trans  &trans    &kp C_PREV    &kp C_NEXT    &trans
             >;
         };
 
